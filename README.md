@@ -19,7 +19,7 @@ This is a simple blog application built with React and Vite, featuring Firebase 
 Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
 
 ## Project Structure
-
+```
 vite-blog-app/
 |-- src/
 |   |-- components/
@@ -47,7 +47,7 @@ vite-blog-app/
 |-- package.json
 |-- .env
 |-- README.md
-
+```
 
 - **components/**: Contains reusable React components.
 - **context/**: Contains context providers for managing global state.
