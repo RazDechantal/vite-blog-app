@@ -1,13 +1,11 @@
-// src/App.jsx
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import { BlogProvider } from './context/BlogContext';
 import HomePage from './pages/HomePage';
 import MyPostsPage from './pages/MyPostsPage';
-import LoginPage from './pages/LoginPage';
-import SignupPage from './pages/SignupPage';
 import AddPostPage from './pages/AddPostPage';
+import AuthPage from './pages/AuthPage';
 import PrivateRoute from './components/PrivateRoute';
 import Navbar from './components/Navbar';
 import './App.css';
@@ -26,8 +24,7 @@ const App = () => {
                   <MyPostsPage />
                 </PrivateRoute>
               } />
-              <Route path="/login" element={<LoginPage />} />
-              <Route path="/signup" element={<SignupPage />} />
+              <Route path="/auth" element={<AuthPage />} />
               <Route path="/addpost" element={
                 <PrivateRoute>
                   <AddPostPage />

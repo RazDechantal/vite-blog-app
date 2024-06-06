@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  width: 100%;
 }
 
 body {
@@ -14,17 +15,27 @@ body {
 
 .navbar {
   width: 100%;
-  background-color: #333;
+  background-color: #ff69b4; /* Changed color to pink */
   color: #fff;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 1rem;
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1000;
 }
 
-.navbar .links {
+.navbar .navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar .links,
+.navbar .user-actions {
   display: flex;
   align-items: center;
 }
@@ -48,13 +59,96 @@ body {
   cursor: pointer;
 }
 
-.container {
-  max-width: 800px;
-  margin: 80px auto 0;
+.auth-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 100px auto;
   padding: 2rem;
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.auth-container input {
+  display: block;
+  width: 100%;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.auth-container button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #ff69b4; /* Match the pink color */
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.auth-container p {
+  cursor: pointer;
+  color: #ff69b4; /* Match the pink color */
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu.open {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #ff69b4; /* Match the pink color */
+  }
+
+  .menu.open {
+    display: flex;
+  }
+
+  .navbar .links {
+    display: none;
+  }
+
+  .navbar .user-actions {
+    flex-direction: column;
+  }
+
+  .navbar a {
+    margin: 0.5rem 0;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 100px auto 0;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
 }
 
 .blog-post {

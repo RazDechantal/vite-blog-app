@@ -1,0 +1,86 @@
+/* Reset some basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.navbar .links,
+.navbar .user-actions {
+  display: flex;
+  align-items: center;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 1rem;
+}
+
+.navbar .user-info {
+  color: #fff;
+  margin-right: 1rem;
+}
+
+.navbar button {
+  background-color: #555;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 100px auto 0; /* Adjusted margin to consider fixed navbar */
+  padding: 2rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.blog-post {
+  border-bottom: 1px solid #ccc;
+  padding: 1rem 0;
+}
+
+.blog-post h2 {
+  margin: 0;
+}
+
+.blog-post .author {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.blog-post .actions {
+  margin-top: 1rem;
+}
+
+.comment {
+  margin-top: 1rem;
+  padding-left: 1rem;
+  border-left: 2px solid #ccc;
+}

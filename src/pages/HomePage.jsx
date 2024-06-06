@@ -10,7 +10,7 @@ const HomePage = () => {
   }
 
   return (
-    <div>
+    <div className="container">
       <h1>All Blog Posts</h1>
       {posts.length > 0 ? (
         <BlogPostList posts={posts} />
