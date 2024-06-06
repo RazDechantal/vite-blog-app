@@ -101,6 +101,7 @@ VITE_MESSAGING_SENDER_ID=your_messaging_sender_id
 VITE_APP_ID=your_app_id
 
 ### Firestore Security Rules
+```plaintext
 Ensure that your Firestore security rules allow authenticated users to read and write to the posts collection. Here is an example:
 service cloud.firestore {
   match /databases/{database}/documents {
@@ -111,26 +112,34 @@ service cloud.firestore {
   }
 }
 
+```
 To set up these rules:
 
-1- Go to the Firebase Console.
-2- Select your project.
-3- Navigate to Firestore Database in the left-hand menu.
-4- Click on the "Rules" tab at the top of the Firestore page.
-5- Update the rules with the provided example and publish the changes.
+1. Go to the Firebase Console.
+2. Select your project.
+3. Navigate to Firestore Database in the left-hand menu.
+4. Click on the "Rules" tab at the top of the Firestore page.
+5. Update the rules with the provided example and publish the changes.
 
+## Available scripts
 
-## aavailable scripts
 In the project directory, you can run:
 
-npm run dev
-Runs the app in the development mode. Open http://localhost:5173 to view it in the browser.
+### `npm run dev`
 
-npm run build
-Builds the app for production to the dist folder. It correctly bundles React in production mode and optimizes the build for the best performance.
+Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-npm run serve
-Serves the production build from the dist folder.
+### `npm run build`
+
+Builds the app for production to the `dist` folder. It correctly bundles React in production mode and optimizes the build for the best performance.
+
+### `npm run serve`
+
+Serves the production build from the `dist` folder.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 This project is licensed under the MIT License.
